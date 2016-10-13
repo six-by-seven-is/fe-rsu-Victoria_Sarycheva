@@ -11,3 +11,23 @@ th{
 thead, tfoot{
 	background-color: #66cdaa;
 }
+
+table{
+	width:100%;
+}
+
+th:first-of-type, .nav_content{
+	width:62%;
+}
+
+th:last-of-type, .nav_sidebar{
+	width:38%;
+}
+
+.nav_sidebar{
+	background-color: #aaa;
+}
+
+iframe{
+	width: 99%;
+}
