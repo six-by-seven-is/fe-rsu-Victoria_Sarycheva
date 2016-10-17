@@ -1,0 +1,52 @@
+html{
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
+}
+
+p, span{
+	font-size: 1.15rem;
+}
+
+h1{
+	font-weight: normal;
+}
+
+.sized{
+	width: 600px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 5px 15px 5px 25px;
+	text-align: right;
+	background: url(http://4.bp.blogspot.com/_x77upIOEtlA/S-H2VADwJuI/AAAAAAAAAEk/gDVLVhM-0XM/s1600/350px-Fleur-de-lis-fill.svg.png) 20px 30px/*pos*/ / 25px/*size*/ repeat-x rgba(0,102,102, .7);
+	text-transform: uppercase;
+	direction:rtl;
+	letter-spacing: 0.2em;
+	word-spacing: 1.1em;
+}
+
+#stylized{
+	color: #eee;
+	background-color: #333;
+	padding: 20px 30px;
+	margin: 10px 70px 40px;
+	font-weight: lighter;
+	line-height: 1.4em;
+	text-indent: 30px;
+}
+
+span{
+	font-weight: 500;
+	font-variant: small-caps;
+	font-style: italic;
+	color: orange;
+	text-decoration: overline;
+	vertical-align: sub;
+}
+
+h3{
+	text-shadow: 0 5px 10px #f96;
+}
+
+h3.whitespaced{
+	white-space: pre;
+}
