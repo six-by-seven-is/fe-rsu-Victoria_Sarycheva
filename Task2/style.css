@@ -1,9 +1,29 @@
+/*
+	color pallette
+
+	#781714 - dark red
+	#eb4135 - pastel red
+	#fead6a - peach beige
+	#fef695 - pastel yellow
+	#668014 - pastel green
+
+*/
+
 html{
 	font-family: 'Rubik', sans-serif;
+	color: #781714;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #668014;
+}
+
+a{
+	color: #eb4135;
 }
 
 table, td, th{
-	border: 2px solid #777;
+	border: 1px solid #fead6a;
 	border-collapse: collapse;
 }
 
@@ -13,33 +33,48 @@ th{
 }
 
 thead, tfoot{
-	background-color: #66cdaa;
+	background-color: #fef695;
 }
 
 table{
 	width:100%;
 }
 
-th:first-of-type, .content{
+th:first-of-type{
 	width:62%;
 }
 
-th:last-of-type, .nav_sidebar{
+th:last-of-type{
 	width:38%;
 }
 
+tfoot td{
+	padding: 10px 20px;
+}
+
 .nav_sidebar{
-	background-color: #aaa;
+	background-color: #fef695;
+	width: 200px;
+	vertical-align: top;
+}
+
+.content{
+	width: calc(100% - 200px);
 }
 
 iframe{
-	width: 99%;
-	height: 700px;
+	width: calc(100% - 2px);
+	border: 1px solid #fead6a;
+	height: calc(100vh - 28px);
+}
+
+.main_container{
+	/*height: 700px;*/
+	height: calc(100vh - 150px);
 }
 
 .top_menu{
 	list-style: none;
-	
 }
 
 .top_menu li{
@@ -47,7 +82,46 @@ iframe{
 	padding: 0 15px;
 }
 
+.top_menu a{
+	text-decoration: none;
+}
+
+.top_menu a:hover{
+	text-decoration: underline;
+}
+
 img{
+	object-fit: cover;
+}
+
+.text_illustration{
+	float: right;
 	width: 400px;
 	height: 300px;
+	padding-left: 20px;
+}
+
+.mainpage_banner{
+	width: 100%;
+	height: 300px;
+	background: #eb4135;
+}
+
+.mainpage_banner img{
+	width: 100%;
+	background: #eb4135;
+}
+
+.cultivar_description{
+	float: left;
+	margin: 15px;
+	width: calc(50% - 60px);
+	padding: 10px;
+	border: 1px solid #668014;
+}
+
+.cultivar_description img{
+	float: none;
+	width: 310px;
+	height: 150px;
 }

@@ -9,8 +9,12 @@
 	<body>
 		<table>
 			<thead>
+			<!-- I didn't create a link to the index page. 
+			Chrome, Yandex and Opera (webkit browsers) reset to the index page on reload. But Firefox doesn't, it stores a selected page in an iframe. -->
 				<tr>
-					<th><h1>Fresh Vegetables On-line Market</h1></th>
+					<!--https://validator.w3.org says: "The element h1 must not appear as a descendant of the th element." 
+					But in the task example of table layout  such an effect produced without CSS. I repeated it.-->
+					<th><h1>Fresh Vegetables On-line Catalogue</h1></th>
 					<th>
 						<ul class="top_menu">
 							<li><a href="potato/content_layout.html" target="content_iframe">Potato</a></li>
@@ -23,7 +27,7 @@
 			<tbody>
 				<tr>
 					<td colspan="2">
-						<iframe src="content.html" name="content_iframe"></iframe>
+						<iframe class="main_container" src="content.html" name="content_iframe"></iframe>
 					</td>
 				</tr>
 			</tbody>
