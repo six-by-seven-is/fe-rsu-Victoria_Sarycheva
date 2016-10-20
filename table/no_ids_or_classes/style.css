@@ -1,0 +1,39 @@
+html{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-kerning: none;
+	line-height: 20px;
+	color: #4c637b;
+}
+
+table, td, th{
+	border: 2px solid white;
+	border-collapse: collapse;
+}
+
+th{
+	text-transform: uppercase;
+	color: #758697;
+	font-size: 11px;
+	line-height: 22px;
+}
+
+td{
+	padding: 15px;
+}
+
+td:first-child{
+	text-transform: capitalize;
+}
+
+tr{
+	background-color: #f2f6fa;
+}
+
+tr:nth-last-child(2n+1) {
+	background-color: #e3eaf3;
+}
+
+tr:not(:only-of-type):hover{
+	background-color: #e2e5e9;
+}
