@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Forms: Task 4</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<style>
+
+			body{
+				max-width: 500px;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			.field-group{
+				display: table;
+			}
+
+			.form-row{
+				display: table-row;
+			}
+
+			.cell{
+				display: table-cell;
+				padding: 2px 0;
+				vertical-align: middle;
+			}
+
+			label:not([for$="sex"]), span{
+				padding-right: 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<h1>The Form</h1>
+		<form action="http://httpbin.org/get" method="get">
+			<fieldset>
+				<legend>Personal data</legend>
+				<div class="field-group">
+					<div class="form-row">
+						<div class="cell">
+							<label for="fstname">First name</label>
+						</div>
+						<div class="cell">
+							<input type="text" name="firstname" id="fstname" autofocus>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="midname">Middle name</label>
+						</div>
+						<div class="cell">
+							<input type="text" name="middlename" id="midname">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="sname">Surname</label>
+						</div>
+						<div class="cell">
+							<input type="text" name="surname" id="sname" required>
+						</div>
+					</div> 
+					<div class="form-row">
+						<div class="cell">
+							<p>Sex</p>
+						</div>
+						<div class="cell">
+							<input type="radio" name="sex" value="male" id="msex" checked>
+							<label for="msex">Male</label>	<br>
+							<input type="radio" name="sex" value="female" id="fsex">
+							<label for="fsex">Female</label>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="age">Age</label>
+						</div>
+						<div class="cell">
+							<input type="number" name="age" id="age" min="18" max="101" step="1">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="country">Country</label>
+						</div>
+						<div class="cell">
+							<select name="country[]"  id="country">
+								<option value="Australia">Australia</option>
+								<option value="New_Zealand">New Zealand</option>
+								<option value="RF">Russian Federation</option>
+								<option value="UK">United Kingdom</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="cell">
+							<p>City</p>
+						</div>
+						<div class="cell">
+							<input type="checkbox" name="city" value="rzn" id="ryazan">
+							<label for="ryazan">Ryazan</label>	<br>
+							<input type="checkbox" name="city" value="msk" id="moscow">
+							<label for="moscow">Moscow</label>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="photo">Photography</label>
+						</div>
+						<div class="cell">
+							<input type="file" name="photo" id="photo">
+						</div>
+					</div>
+				</div>
+				<hr>
+
+
+				<div class="field-group">
+					<div class="form-row">
+						<div class="cell">
+							<label for="title">Title</label>
+						</div>
+						<div class="cell">
+							<select size="8" name="title[]"  id="title">
+								<optgroup label="Technologies">
+									<option value="web_master">Web Master</option>
+									<option value="database_admin">Database Administrator</option>
+									<option value="design">Computer-aided design</option>
+								</optgroup>
+								<optgroup label="Finance">
+									<option value="economic_plan">Economic planning</option>
+									<option value="management_accounting">Management Accounting</option>
+									<option value="b_and_p">Budgeting and planning</option>
+								</optgroup>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="psalary">Salary</label>
+						</div>
+						<div class="cell">
+							<input type="range"  name="salary" id="psalary" min="10000" max="100000" step="1000" value="70000">
+						</div>
+					</div>
+				</div>
+
+				<textarea  name="about" placeholder="Tell us about yourself..." rows="10" cols="50"></textarea><br>
+
+			</fieldset>
+			<fieldset>
+				<legend>Contact information</legend>
+				<div class="field-group">
+					<div class="form-row">
+						<div class="cell">
+							<label for="website">Site</label>
+						</div>
+						<div class="cell">
+							<input type="url" name="site" id="website">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="email">E-mail</label>
+						</div>
+						<div class="cell">
+							<input type="email" name="email" id="email" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="cell">
+							<label for="phonenum">Phone</label>
+						</div>
+						<div class="cell">
+							<input type="tel" name="phone" id="phonenum">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<br>
+			<label><span>Password</span><input type="password" name="password" required></label>
+			<hr>
+			<input type="submit">
+			<input type="reset">
+		</form>
+	</body>
+</html>

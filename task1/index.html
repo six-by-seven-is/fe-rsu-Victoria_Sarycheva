@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Forms: Task 1</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			dt{
+				font-style: italic;
+			}
+			
+			table, th, td{
+				border: 1px solid #999;
+			}
+			
+			table{
+				width: 100%;
+			}
+			
+			td{
+				height: 20px;
+			}
+			
+			span{
+				padding-right: 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a href="#">Searching</a>
+			</li>
+			<li>
+				<a href="#">YouTube</a>
+			</li>
+			<li>
+				<a href="#">Card</a>
+			</li>
+			<li>
+				<a href="#">Play</a>
+			</li>
+			<li>
+				<a href="#">News</a>
+			</li>
+			<li>
+				<a href="#">Mail</a>
+			</li>
+		</ul>
+		<ol start="7">
+			<li>Searching</li>
+			<li>Card</li>
+			<li>Market</li>
+			<li>News</li>
+			<li>Dictionaries</li>
+			<li>Pictures</li>
+			<li>Yet</li>
+			<li style="list-style: none;">
+				<ul> <!-- validator.w3 doesnt'allow <ul> to be a child element of <ol> -->
+					<li>Fights</li>
+					<li>Auto</li>
+					<li>Poster</li>
+					<li>Blogs</li>
+				</ul>
+			</li>
+		</ol>
+		<dl>
+			<dt>Tag</dt>
+				<dd>element of Hypertext Markup Language</dd>
+			<dt>The Semantic Web</dt>
+				<dd>The direction of development of the World Wide Web the aim of which is to provide information in a form suitable for machine processing</dd>
+		</dl>
+		<hr>
+		<table>
+			<caption>CSS generated content for pseudo-elements</caption>
+			<thead>
+				<tr>
+					<th>IE</th>
+					<th>Firefox</th>
+					<th>Chrome</th>
+					<th>Safari</th>
+					<th>Opera</th>
+					<th>iOS Safari</th>
+					<th>Opera Mini</th>
+					<th>Android Browser</th>
+					<th>Chrome for Android</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">	</td>
+					<td rowspan="4">	</td>
+					<td>27</td>
+					<td rowspan="3">	</td>
+					<td rowspan="5">	</td>
+					<td rowspan="4">	</td>
+					<td rowspan="5">	</td>
+					<td>	</td>
+					<td rowspan="5">	</td>
+				</tr>
+				<tr>
+					<td>31</td>
+					<td>2.3</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>33</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>34</td>
+					<td>5.1</td>
+					<td>4.1</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>thirty</td>
+					<td>35</td>
+					<td>6.1</td>
+					<td>6.1</td>
+					<td>4.3</td>
+				</tr>
+				<tr>
+					<td>eleven</td>
+					<td>31</td>
+					<td>36</td>
+					<td>7</td>
+					<td>23</td>
+					<td>7.1</td>
+					<td>7</td>
+					<td>4.4</td>
+					<td>36</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="9">Method of displaying text or images before or after the given element's contents using the :before and :after pseudo-elements</td>
+				</tr>
+			</tfoot>
+		</table>
+		<hr>
+		<form>
+			<fieldset>
+				<legend>Personal data</legend>
+				<br>
+				<label><span>Surname</span><input type="text" name="surname" autofocus></label><br><br>
+				<label><span>First name</span><input type="text" name="firstname"></label><br><br>
+				<label><span>Middle name</span><input type="text" name="midname"></label><br><br>
+				<span>You are</span> 
+				<label><input type="radio" name="sex" value="male" checked><span>male</span></label>
+				<label><input type="radio" name="sex" value="female"><span>female</span></label><br><br>
+				<label><span>Age</span><input type="number" name="age" min="18" max="101" step="1"></label><br><br>
+				<label><span>Country of Residence</span>
+					<select name="country[]">
+						<!--<option disabled>Choose your country</option>-->
+						<option value="Australia">Australia</option>
+						<option value="New_Zealand">New Zealand</option>
+						<option value="RF">Russian Federation</option>
+						<option value="UK">United Kingdom</option>
+					</select>
+				</label><br><br>
+				<span>City</span> 
+				<label><input type="checkbox" name="city" value="rzn"><span>Ryazan</span></label>
+				<label><input type="checkbox" name="city" value="msk"><span>Moscow</span></label><br><br>
+				<label><span>Photography</span><input type="file" name="photo"></label><br><br>
+				<hr>
+				<label><span>Title</span>
+					<select size="8" name="title[]">
+						<optgroup label="Technologies">
+							<option value="web_master">Web Master</option>
+							<option value="database_admin">Database Administrator</option>
+							<option value="design">Computer-aided design</option>
+						</optgroup>
+						<optgroup label="Finance">
+							<option value="economic_plan">Economic planning</option>
+							<option value="management_accounting">Management Accounting</option>
+							<option value="b_and_p">Budgeting and planning</option>
+						</optgroup>
+					</select>
+				</label><br><br>
+				<label><span>Salary</span><input type="range"  name="salary" min="10000" max="100000" step="1000" value="70000"></label><br><br>
+				<textarea  name="about" placeholder="Tell us about yourself..." rows="10" cols="50"></textarea><br><br>
+			</fieldset>
+			<fieldset>
+				<legend>Contact information</legend>
+				<br>
+				<label><span>Site</span><input type="url" name="site"></label><br><br>
+				<label><span>Email</span><input type="email" name="email"></label><br><br>
+				<label><span>Phone</span><input type="tel" name="phone"></label><br><br>
+			</fieldset>
+			<br>
+			<label><span>Password</span><input type="password"  name="password" required></label><br><br>
+			<input type="submit" value="Submit">
+			<input type="reset">
+		</form>
+	</body>
+</html>

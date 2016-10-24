@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Forms: Task 3</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<style>
+
+			label{
+				padding-right: 5px;
+			}
+
+			button{
+				background: none;
+				border: none;
+			}
+
+			img{
+				vertical-align: middle;
+				width: 22px;
+				height: 22px;
+			}
+
+		</style>
+	</head>
+	<body>
+	<h1>My search</h1>
+		<form action="https://yandex.ru/search/?text=value" target="_blank" method="get">
+			<label for="searchfield">I want to find:</label>
+			<input type="search" name="text" id="searchfield" autofocus required>
+			<button type="submit"><img src="magnifying-glass-search.svg" alt="looking-glass"></button>
+		</form>
+	</body>
+</html>

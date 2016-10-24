@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Forms: Task 2</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<style>
+
+			body{
+				max-width: 500px;
+				margin: 0 auto;
+				position: relative;
+			}
+
+/*			input:not([type="submit"]){
+				border: 1px solid red;
+				position: absolute;
+				left: 100px;
+			}*/
+
+			.form-row{
+				clear: both;
+				text-align:right;
+				margin: 5px 0;
+			}
+
+			label:not([for$="sex"]){
+				float: left;
+				padding-right: 10px;
+			}
+
+			.field-group, p{
+				float: left;
+				clear: both;
+			}
+
+			.radio-group{
+				float: left;
+				margin: 5px 60px;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<h1>Registration form</h1>
+		<form action="http://httpbin.org/post" method="post">
+			<fieldset>
+				<legend>Personal data</legend>
+				<div class="field-group">
+					<div class="form-row">
+						<label for="fstname">First name</label>
+						<input type="text" name="firstname" id="fstname" autofocus>
+					</div>
+					<div class="form-row">
+						<label for="sname">Surname</label>
+						<input type="text" name="surname" id="sname" required>
+					</div>
+				</div>
+				<p>Sex</p> 
+				<div class="radio-group">
+					<div>
+						<input type="radio" name="sex" value="male" id="msex" checked>
+						<label for="msex">Male</label>
+					</div>
+					<div>
+						<input type="radio" name="sex" value="female" id="fsex">
+						<label for="fsex">Female</label>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Contact information</legend>
+				<div class="field-group">
+					<div class="form-row">
+						<label for="website">Site</label>
+						<input type="url" name="site" id="website">
+					</div>
+					<div class="form-row">
+						<label for="email">E-mail</label>
+						<input type="email" name="email" id="email" required>
+					</div>
+					<div class="form-row">
+						<label for="phonenum">Phone</label>
+						<input type="tel" name="phone" id="phonenum">
+					</div>
+				</div>
+			</fieldset>
+			<br>
+			<input type="submit">
+		</form>
+	</body>
+</html>
