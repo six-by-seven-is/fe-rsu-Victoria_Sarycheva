@@ -1,0 +1,60 @@
+html{
+	font-family: Tahoma, sans-serif;
+	font-size: 20px;
+	background: #222;
+}
+
+.page-container{
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+}
+
+div[class$="-block"]{
+	float: left;
+	margin: 70px 0;
+	width: 10px;
+	height: 100px;
+}
+
+.rectangle-block{
+	background: white;
+}
+
+.page-container .circle-container-block {
+	width: 280px;
+	height: 100px;
+	position: relative;
+}
+
+.ball {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #e71;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	left: -4px;
+	transform: scaleX(.7);
+	animation: move 1s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+
+	10%{
+		transform: scaleX(1);
+	}
+
+	90%{
+		transform: scaleX(1);
+	}
+
+	100% {
+		transform: scaleX(.7);
+		left: 259px;
+	}
+}

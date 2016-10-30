@@ -1,0 +1,19 @@
+html{
+
+}
+
+body{
+	width: 350px;
+	margin: 0 auto;
+}
+
+h1{
+	color: white;
+	background: teal;
+	padding: 10px;
+}
+
+p{
+	background: lightblue;
+	padding: 10px 30px 10px 10px;
+}

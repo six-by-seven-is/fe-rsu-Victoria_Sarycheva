@@ -1,0 +1,23 @@
+html{
+	font-size: 16px;
+}
+
+p{
+	background: #d8f0f3;
+	padding: 10px;
+}
+
+@media screen and (max-width: 550px){
+	p{
+		font-size: 21px;
+	}
+}
+
+/*
+	This works as expected to in Opera, Firefox, IE, Yandex Browser.
+	But Chrome doesn't let to resize it's window less then 591px, 
+	so the minimun reached viewport width is 581px.
+	In the Devtools mode (F12) Chrom doesn't show changes too.
+	Firefox in the device mode (Ctrl+Shift+M) shows changes. So 
+	I guess this should work for mobile devices.
+*/

@@ -1,0 +1,49 @@
+html{
+
+}
+
+body{
+	width: 350px;
+	margin: 0 auto;
+}
+
+/*Styles for circles*/
+
+.border-circle{
+	width: 150px;
+	height: 100px;
+	border: 2px solid gray;
+}
+
+.border-circle div{
+	width: 0;
+	height: 0;
+	margin: 20px auto;
+	border: 30px solid LightSeaGreen;
+	border-radius: 50%;
+}
+
+.gradient-circle{
+	width: 150px;
+	height: 100px;
+	border: 2px solid gray;
+	background-image: radial-gradient(circle at center, LightSeaGreen 30px, white 31px);
+}
+
+/*Styles for button*/
+
+button{
+	padding: 10px 60px;
+	font-size: 24px;
+	font-family: Arial, sans-serif;
+	background-image: linear-gradient( to bottom, #8a91c7, #575ce7, #7797dd);
+	color: white;
+	border: 6px double white;
+	border-radius: 18px;
+	transition: box-shadow 0.3s;
+}
+
+button:hover{
+	cursor: pointer;
+	box-shadow: 0 0 20px rgba(42,224,245,0.7);
+}

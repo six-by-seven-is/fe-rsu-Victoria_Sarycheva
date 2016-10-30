@@ -1,0 +1,47 @@
+html{
+	
+}
+
+body{
+	width: 400px;
+	margin: 50px auto;
+}
+
+nav a{
+	font-size: 20px;
+	text-decoration: none;
+	padding: 0 15px;
+	position: relative;
+}
+
+nav a:not(:last-child)::after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 20px;
+	background: red;
+	position: absolute;
+	left: 100%;
+	top: 3px;
+	transition: 0.5s;
+}
+
+nav a:not(:last-child)::before{
+	content: "";
+	display: block;
+	width: 70px;
+	height: 0px;
+	background: blue;
+	position: absolute;
+	left: 10px;
+	top: 23px;
+	transition: 0.5s;
+}
+
+nav a:not(:last-child):hover::after{
+	display: none;
+}
+
+nav a:not(:last-child):hover::before{
+	height: 3px;
+}
