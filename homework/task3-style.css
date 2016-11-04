@@ -1,0 +1,78 @@
+html{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+body{
+	width: 740px;
+}
+
+.theme_preview{
+	width: 200px;
+	margin: 10px;
+
+	/* border: 1px solid red;
+	box-sizing: border-box; */
+}
+
+.theme_preview img{
+	height: 200px;
+	width: 178px;
+	object-fit: cover;
+	padding: 10px 10px 12px;
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+
+	vertical-align: top;
+}
+
+button{
+	height: 31px;
+	padding: 0 19px;
+	font-kerning: normal;
+	color: #828282;
+	margin: 10px 0 0;
+	background-image: linear-gradient(to bottom, #fefefe, #f1f2ec);
+	border: 1px solid #ced1c5;
+	border-radius: 3px;	
+}
+
+button:first-of-type{
+	float: left;
+}
+
+button:last-of-type{
+	float: right
+}
+
+button:hover{
+	background-image: radial-gradient(ellipse farthest-side, #7ac620, #98c95f);
+	color: white;
+	border-color: #c8c8c8;
+}
+
+section{
+	clear: both;
+}
+
+.float_section .theme_preview{
+	float: left;
+}
+
+.inline_section .theme_preview{
+	display: inline-block;
+
+	/*one of possible ways to remove exrta inline space*/
+	letter-spacing: normal; /*removed for children*/
+}
+
+.inline_section .tiles_container{ /*done on parent block*/
+	letter-spacing: -0.3em;
+}
+
+.flex_section .tiles_container{
+	display: flex;
+	/*flex-direction: row;*/ /*this is default*/
+	/*flex-wrap: wrap;*/
+	flex-flow: row wrap; /*short form for the two rows above*/
+}

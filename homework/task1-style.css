@@ -1,0 +1,56 @@
+html, body{
+	font-size: 16px;
+}
+
+.dropdown_container{
+	position: absolute;
+	top: 0;
+	left: 30px;
+	box-sizing: border-box;
+	width: 125px;
+	margin: 0;
+	background: #35baf6;
+	color: white;
+	border: 1px solid #0cacf4;
+	border-top: none;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+.dropdown_container nav a{
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+	color: white;
+}
+
+.dropdown_container nav a:hover{
+	background: #03a9f4;
+}
+
+[type="checkbox"]:not(:checked) + nav{
+	display: none;
+	height: 0px;
+}
+
+[type="checkbox"]:checked + nav{
+	display: block;
+}
+
+[type="checkbox"]{
+	display: none;
+}
+
+label{
+	display: block;
+	border-top: 2px solid #7bb9f9;
+	border-radius: 0 0 10px 10px;
+	/* border: 1px solid black; */
+	padding-bottom: 5px;
+}
+
+label:hover{
+	box-shadow: 0 0 10px 0 rgba(53,186,246,1); /* #35baf6 */
+}
