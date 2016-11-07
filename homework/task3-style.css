@@ -8,6 +8,7 @@ body{
 }
 
 .theme_preview{
+	position: relative;
 	width: 200px;
 	margin: 10px;
 
@@ -15,7 +16,7 @@ body{
 	box-sizing: border-box; */
 }
 
-.theme_preview img{
+.theme_preview .image_container{
 	height: 200px;
 	width: 178px;
 	object-fit: cover;
@@ -24,6 +25,39 @@ body{
 	border-radius: 3px;
 
 	vertical-align: top;
+}
+
+.theme_preview img{
+	height: 200px;
+	width: 178px;
+	object-fit: cover;
+}
+
+.theme_preview .theme_description{
+	display: none;
+	position: absolute;
+	top: 11px;
+	left: 11px;
+	margin: 0;
+	height: 130px;
+	width: 178px;
+	padding-top: 70px;
+	text-align: center;
+	color: #aaa;
+	background-color: rgba(50, 50, 50, 0.7);
+	cursor: pointer;
+}
+
+.theme_description span{
+	color: #fff;
+}
+
+.theme_description strong{
+	color: #89ca3a;
+}
+
+.image_container:hover .theme_description{
+	display: block;
 }
 
 button{
