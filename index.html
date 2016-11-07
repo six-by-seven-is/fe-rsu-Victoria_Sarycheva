@@ -15,9 +15,9 @@
 				<a class="navigation__item" href="#">Our Support</a>
 			</nav>
 			<button class="button button_accent" type="button" name="authorization">
-				<span class="button-wrapper">
-					<img src="images/avatar-01.jpg" alt="user photo">
-					<span class="button-text">John Doe</span>
+				<span class="button__wrapper">
+					<img class="button__image" src="images/avatar-01.jpg" alt="user photo">
+					<span class="button__text">John Doe</span>
 					<i class="fa fa-chevron-circle-down"></i>
 				</span>
 			</button>
@@ -30,14 +30,14 @@
 			<aside class="sidebar">
 				<div class="navigation__section cta-section">
 					<button class="button button_cta" type="button" name="addabook">
-						<span class="button-wrapper">
+						<span class="button__wrapper">
 							<i class="fa fa-plus"></i>
-							<span class="button-text">Add a book</span>
+							<span class="button__text">Add a book</span>
 						</span>
 					</button>
 				</div>
 				<div class="navigation__section">
-					<nav class="main-nav">
+					<nav class="navigation_main">
 						<a class="navigation__item" href="#">
 							<i class="fa fa-book"></i>
 							<span>Now reading</span>
@@ -66,41 +66,47 @@
 				</div>
 				<div class="navigation__section">
 					<ul class="cathegories">
-						<li>
+						<li class="cathegory__item">
 							<a class="navigation__item" href="#">Must read titles</a>
 						</li>
-						<li>
+						<li class="cathegory__item">
 							<a class="navigation__item" href="#">Best of list</a>
 						</li>
-						<li>
+						<li class="cathegory__item">
 							<a class="navigation__item" href="#">Classic novels</a>
 						</li>
-						<li>
+						<li class="cathegory__item">
 							<a class="navigation__item" href="#">Non fiction</a>
 						</li>
 					</ul>
 				</div>
 				<div class="navigation__section">
 					<div class="history__item">
-						<p><i class="fa fa-clock-o"></i></p>
+						<p class="_reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
 						<div>
-							<p>
-							You added <a href="#">Fight Club</a> 
-							by <a href="#">Chuck Palahniuk</a> 
-							to your <a href="#">Must Read Titles</a>.
+							<p class="_reduced-vertical-margin">
+								You added 
+									<a class="reference" href="#">Fight Club</a> 
+								by 
+									<a class="reference" href="#">Chuck Palahniuk</a> 
+								to your 
+									<a class="reference" href="#">Must Read Titles</a>.
 							</p>
-							<p>24 minutes ago</p>
+							<p class="_reduced-vertical-margin">24 minutes ago</p>
 						</div>
 					</div>
 					<div class="history__item">
-						<p><i class="fa fa-clock-o"></i></p>
+						<p class="_reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
 						<div>
-							<p>
-							You added <a href="#">The Trial</a> 
-							by <a href="#">Franz Kafka</a> 
-							to your <a href="#">Must Read Titles</a>.
+							<p class="_reduced-vertical-margin">
+								You added 
+									<a class="reference" href="#">The Trial</a> 
+								by 
+									<a class="reference" href="#">Franz Kafka</a> 
+								to your 
+									<a class="reference" href="#">Must Read Titles</a>.
 							</p>
-							<p>48 minutes ago</p>
+							<p class="_reduced-vertical-margin">48 minutes ago</p>
 						</div>
 					</div>
 				</div>
@@ -115,31 +121,47 @@
 					</div>
 					<div class="content__header__line">
 						<form class="filter">
-							<div class="formgroup">
-								<input type="radio" name="bookfilter" value="all" id="allbooks" checked>
-								<label class="navigation__item"
-								 for="allbooks">All books</label>
-								<input type="radio" name="bookfilter" value="recent" id="recentbooks">
-								<label class="navigation__item"
-								 for="recentbooks">Most recent</label>
-								<input type="radio" name="bookfilter" value="popular" id="popularbooks">
-								<label class="navigation__item"
-								 for="popularbooks">Most popular</label>
-								<input type="radio" name="bookfilter" value="free" id="freebooks">
-								<label class="navigation__item"
-								 for="freebooks">Free books</label>
+							<div class="filter__group">
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="all" id="allbooks" checked>
+								<label class="navigation__item" for="allbooks">
+									All books
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="recent" id="recentbooks">
+								<label class="navigation__item" for="recentbooks">
+									Most recent
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="popular" id="popularbooks">
+								<label class="navigation__item" for="popularbooks">
+									Most popular
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="free" id="freebooks">
+								<label class="navigation__item" for="freebooks">
+									Free books
+								</label>
 							</div>
-							<div class="formgroup search">
-								<input class="search-field" type="search" placeholder="Enter Keywords">
-								<button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+							<div class="filter__group searchform">
+								<input class="searchform__field" type="search" 
+									placeholder="Enter Keywords">
+								<button class="searchform__button" type="submit">
+									<i class="fa fa-search"></i>
+								</button>
 							</div>
 						</form>
 					</div>
 				</header>
 
-				<div class="tiles_container">
+				<div class="tiles-container">
 					<div class="preview">
-						<img src="images/covers/book-cover1.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover1.jpg" alt="book cover image">
 						<h3 class="book-title">Jewels of Nizam</h3>
 						<p class="book-author">by Greeta Devi</p>
 						<div class="rating">
@@ -151,7 +173,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover2.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover2.jpg" alt="book cover image">
 						<h3 class="book-title">Cakes &amp; Bakes</h3>
 						<p class="book-author">by Sanjeev Kapoor</p>
 						<div class="rating">
@@ -163,7 +186,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover3.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover3.jpg" alt="book cover image">
 						<h3 class="book-title">Jamie’s Kitchen</h3>
 						<p class="book-author">by Jamie Oliver</p>
 						<div class="rating">
@@ -175,7 +199,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover4.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover4.jpg" alt="book cover image">
 						<h3 class="book-title">Inexpensive Family Meals</h3>
 						<p class="book-author">by Simon Holst</p>
 						<div class="rating">
@@ -187,7 +212,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover5.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover5.jpg" alt="book cover image">
 						<h3 class="book-title">Paleo Slow Cooking</h3>
 						<p class="book-author">by Chrissy Gower</p>
 						<div class="rating">
@@ -199,7 +225,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover6.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover6.jpg" alt="book cover image">
 						<h3 class="book-title">Details</h3>
 						<p class="book-author">by Greeta</p>
 						<div class="rating">
@@ -211,7 +238,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover7.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover7.jpg" alt="book cover image">
 						<h3 class="book-title">Details</h3>
 						<p class="book-author">by Greeta</p>
 						<div class="rating">
@@ -223,7 +251,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover8.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover8.jpg" alt="book cover image">
 						<h3 class="book-title">Details</h3>
 						<p class="book-author">by Greeta</p>
 						<div class="rating">
@@ -235,7 +264,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover9.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover9.jpg" alt="book cover image">
 						<h3 class="book-title">Details</h3>
 						<p class="book-author">by Greeta</p>
 						<div class="rating">
@@ -247,7 +277,8 @@
 						</div>
 					</div>
 					<div class="preview">
-						<img src="images/covers/book-cover10.jpg" alt="book cover image">
+						<img class="book-cover" 
+							src="images/covers/book-cover10.jpg" alt="book cover image">
 						<h3 class="book-title">Details</h3>
 						<p class="book-author">by Greeta</p>
 						<div class="rating">
@@ -268,12 +299,12 @@
 
 		<footer class="app-footer">
 			<button class="button" type="button" name="settings">
-				<span class="button-wrapper">
+				<span class="button__wrapper">
 					<i class="fa fa-question-circle"></i>
 				</span>
 			</button>
 			<button class="button button_accent" type="button" name="settings">
-				<span class="button-wrapper">
+				<span class="button__wrapper">
 					<i class="fa fa-cog"></i>
 				</span>
 			</button>
