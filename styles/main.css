@@ -1,0 +1,123 @@
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+/**
+ * 		accent bright (blue)	#15a4fa
+ * 		general pannels (blue) 			
+ * 				light			#2f364a
+ * 				middle	 		#1f2637
+ * 				dark	 		#181e2c
+ * 		filter (blue)			
+ * 				background		#eef1f7
+ * 				active	 		#97b3ce
+ * 		CTA button bg (pink)	#f2795a
+ * 		cathegory markers 			
+ * 				pink			#e64c66
+ * 				yellow	 		#ffab00
+ * 				skyblue	 		#00bfdd
+ * 				violet	 		#7874cf
+ */
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: 	url('fonts/Proxima_Nova/regular-webfont.woff2') format('woff2'),
+			url('fonts/Proxima_Nova/regular-webfont.woff') format('woff'),
+			url('fonts/Proxima_Nova/regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+     font-family: "Proxima Nova";
+     src: 	url('fonts/Proxima_Nova/regular_italic-webfont.woff2') format('woff2'),
+			url('fonts/Proxima_Nova/regular_italic-webfont.woff') format('woff'),
+     		url('fonts/Proxima_Nova/regular_italic-webfont.ttf') format('truetype');
+     font-weight: normal;
+     font-style: italic;
+}
+@font-face {
+     font-family: "Proxima Nova";
+     src: 	url('fonts/Proxima_Nova/bold-webfont.woff2') format('woff2'),
+			url('fonts/Proxima_Nova/bold-webfont.woff') format('woff'),
+     		url('fonts/Proxima_Nova/bold-webfont.ttf') format('truetype');
+     font-weight: bold;
+     font-style: normal;
+}
+@font-face {
+     font-family: "Proxima Nova";
+     src: 	url('fonts/Proxima_Nova/bold_italic-webfont.woff2') format('woff2'),
+			url('fonts/Proxima_Nova/bold_italic-webfont.woff') format('woff'),
+     		url('fonts/Proxima_Nova/bold_italic-webfont.ttf') format('truetype');
+     font-weight: bold;
+     font-style: italic;
+}
+
+/*------------------------------------*\
+  # COMMON STYLES
+\*------------------------------------*/
+
+html, body{
+	font-family: "Proxima Nova", Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	overflow: hidden;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.navigation__item{
+	text-transform: capitalize;
+}
+
+.navigation__item{
+	font-size: 13px;
+	color: #78829d;
+}
+
+.button{
+	border: none;
+	height: 100%;
+	padding: 0 15px;
+
+	/*font-size: 13px;*/
+	color: #fff;
+	background-color: #1f2637;
+}
+
+.button__wrapper{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap; /*short form*/
+}
+
+.button:hover{
+	box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .75);
+}
+
+.button .fa{
+	padding: 0 5px;
+	flex-grow: 0;
+}
+
+.button_accent{
+	background-color: #15a4fa;
+}
+
+.button_accent .button__image{
+	border: 1px solid #eaeff7;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	margin-left: -5px;
+}
+
+.button_accent .button__text{
+	padding: 0 10px;
+}

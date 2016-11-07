@@ -1,0 +1,124 @@
+/*------------------------------------*\
+  # SECTIONS' STYLES: content-block
+\*------------------------------------*/
+
+.sidebar{
+	display: flex;
+	flex-flow: column nowrap; /*short form*/
+	justify-content: flex-start/* space-between */;
+
+	width: 15vw;
+	min-width: 200px;
+	background-color: #19202e;
+
+	overflow-y: auto;
+}
+
+.navigation__section{
+	background-color: #1f2637;
+}
+
+.navigation__section:not(:first-child){
+	border-top: 1px solid #282f41;
+	margin-top: 4px;
+	padding-bottom: 10px;
+}
+
+.navigation__section:not(:last-child){
+	border-bottom: 1px solid #141824;
+	/*margin-bottom: 4px;*/
+}
+
+.cta-section{
+	padding: 35px 20px;
+}
+
+.button_cta{
+	width: 160px;
+	height: 44px;
+	background-color: #f2795a;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+
+.button_cta .fa{
+	font-size: 16px;
+	line-height: 16px;
+	padding-right: 15px;
+}
+
+.navigation_main .navigation__item{
+	display: block;
+	padding: 0 20px;
+
+	line-height: 38px;
+
+	transition: .2s;
+}
+
+.navigation_main .navigation__item .fa{
+	font-size: 14px;
+	width: 26px;
+}
+
+.navigation_main .navigation__item:hover{
+	color: #fff;
+	background-color: #15a4fa;
+}
+
+.cathegories{
+	padding-left: 45px;
+}
+
+.cathegories .cathegory__item{
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.cathegories .cathegory__item:nth-of-type(1) { color: #e64c66; }
+.cathegories .cathegory__item:nth-of-type(2) { color: #ffab00; }
+.cathegories .cathegory__item:nth-of-type(3) { color: #00bfdd; }
+.cathegories .cathegory__item:nth-of-type(4) { color: #7874cf; }
+
+.history__item{
+	font-size: 12px;
+	line-height: 18px;
+	padding: 30px 20px 0;
+	color: #6f7d95;
+	display: flex;
+	flex-flow: row nowrap; /*short form*/
+}
+
+.history__item ._reduced-vertical-margin{
+	margin: 6px 0;
+}
+
+.history__item .fa{
+	font-size: 16px;
+	line-height: 20px;
+	width: 26px;
+}
+
+.history__item .reference{
+	color: #97b3ce;
+}
+
+.navigation_top .navigation__item:hover, 
+.cathegories .navigation__item:hover, 
+.history__item .reference:hover{
+	text-decoration: underline;
+}
+
+.navigation__section:last-of-type:after{
+	content:"";
+	height: 900px;
+	display: block;
+}
+
+.navigation__section:last-of-type{
+	overflow-y: hidden;
+}

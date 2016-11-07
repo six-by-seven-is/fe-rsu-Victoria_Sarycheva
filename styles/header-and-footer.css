@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------*\
+  # SECTIONS' STYLES: header & footer are too much similar
+\*--------------------------------------------------------------*/
+
+.app-header, .app-footer{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 5vh;
+	min-height: 45px;
+	overflow: hidden;
+}
+
+.app-header{
+	border-radius: 5px 5px 0 0;
+	background-color: #2f364a;
+}
+
+.app-footer{
+	border-radius: 0 0 5px 5px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #181e2c;
+}
+
+
+
+.navigation_top{
+	padding: 0 5px;
+}
+
+.app-header .navigation__item{
+	padding: 0 12px;
+}
+
+.app-header .navigation__item:not(:first-of-type):before{
+	content: '';
+	display: inline-block;
+	position: relative;
+	right: 14px;
+	bottom: 2px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #1f2635;
+}
