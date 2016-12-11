@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>E-Book Shop</title>
+		<meta charset="utf-8">
+		<script src="https://use.fontawesome.com/a0289dd1ab.js"></script>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/header-and-footer.css">
+		<link rel="stylesheet" href="styles/content-grid.css">
+		<link rel="stylesheet" href="styles/sidebar.css">
+		<link rel="stylesheet" href="styles/content.css">
+		<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+	</head>
+	<body>
+
+		<header class="app-header">
+			<nav class="navigation navigation--top">
+				<a class="navigation__item reference" href="#">Help Center</a>
+				<a class="navigation__item reference" href="#">Our Support</a>
+			</nav>
+			<button class="button button--accent" type="button" name="authorization">
+				<span class="button__wrapper">
+					<img class="button__image" src="images/avatar-01.jpg" alt="user photo">
+					<span class="button__text">John Doe</span>
+					<i class="fa fa-chevron-circle-down"></i>
+				</span>
+			</button>
+		</header>
+
+
+
+		<div class="app-content">
+
+			<aside class="sidebar">
+				<div class="panel cta-section">
+					<button class="button button--cta" type="button" name="addabook">
+						<span class="button__wrapper">
+							<i class="fa fa-plus"></i>
+							<span class="button__text">Add a book</span>
+						</span>
+					</button>
+				</div>
+				<div class="panel">
+					<nav class="navigation--main">
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-book"></i>
+							<span>Now reading</span>
+						</a>
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-globe"></i>
+							<span>Browse</span>
+						</a>
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-shopping-cart"></i>
+							<span>Buy books</span>
+						</a>
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-star"></i>
+							<span>Favourite books</span>
+						</a>
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-th-list"></i>
+							<span>Wishlist</span>
+						</a>
+						<a class="navigation__item reference reference--non-underlined" href="#">
+							<i class="fa fa-clock-o"></i>
+							<span>History</span>
+						</a>
+					</nav>
+				</div>
+				<div class="panel">
+					<ul class="cathegories">
+						<li class="cathegory cathegory--red-bullet">
+							<a class="navigation__item reference" href="#">Must read titles</a>
+						</li>
+						<li class="cathegory cathegory--yellow-bullet">
+							<a class="navigation__item reference" href="#">Best of list</a>
+						</li>
+						<li class="cathegory cathegory--skyblue-bullet">
+							<a class="navigation__item reference" href="#">Classic novels</a>
+						</li>
+						<li class="cathegory cathegory--violet-bullet">
+							<a class="navigation__item reference" href="#">Non fiction</a>
+						</li>
+					</ul>
+				</div>
+				<div class="panel">
+					<div class="history__item">
+						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
+						<div>
+							<p class="p--reduced-vertical-margin">
+								You added 
+									<a class="reference reference--bright" href="#">Fight Club</a> 
+								by 
+									<a class="reference reference--bright" href="#">Chuck Palahniuk</a> 
+								to your 
+									<a class="reference reference--bright" href="#">Must Read Titles</a>.
+							</p>
+							<p class="p--reduced-vertical-margin">24 minutes ago</p>
+						</div>
+					</div>
+					<div class="history__item">
+						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
+						<div>
+							<p class="p--reduced-vertical-margin">
+								You added 
+									<a class="reference reference--bright" href="#">The Trial</a> 
+								by 
+									<a class="reference reference--bright" href="#">Franz Kafka</a> 
+								to your 
+									<a class="reference reference--bright" href="#">Must Read Titles</a>.
+							</p>
+							<p class="p--reduced-vertical-margin">48 minutes ago</p>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+
+			<section class="content">
+
+				<header class="content__header">
+					<div class="content__header__line">
+						<h1 class="content__title">Browse available books</h1>
+					</div>
+					<div class="content__header__line">
+						<form class="filter">
+							<div class="filter__group">
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="all" id="allbooks" checked>
+								<label class="filter__item reference reference--non-underlined" for="allbooks">
+									All books
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="recent" id="recentbooks">
+								<label class="filter__item reference reference--non-underlined" for="recentbooks">
+									Most recent
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="popular" id="popularbooks">
+								<label class="filter__item reference reference--non-underlined" for="popularbooks">
+									Most popular
+								</label>
+								<input class="r-button" 
+									type="radio" name="bookfilter" 
+									value="free" id="freebooks">
+								<label class="filter__item reference reference--non-underlined" for="freebooks">
+									Free books
+								</label>
+							</div>
+							<div class="filter__group searchform">
+								<input class="searchform__field" type="search" 
+									placeholder="Enter Keywords">
+								<button class="searchform__button" type="submit">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</header>
+
+				<div class="tiles-container">
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover1.jpg" alt="book cover image">
+						<h3 class="book-title">Jewels of Nizam</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Greeta Devi</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover2.jpg" alt="book cover image">
+						<h3 class="book-title">Cakes &amp; Bakes</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Sanjeev Kapoor</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover3.jpg" alt="book cover image">
+						<h3 class="book-title">Jamie’s Kitchen</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover4.jpg" alt="book cover image">
+						<h3 class="book-title">Inexpensive Family Meals</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Simon Holst</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover5.jpg" alt="book cover image">
+						<h3 class="book-title">Paleo Slow Cooking</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Chrissy Gower</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover6.jpg" alt="book cover image">
+						<h3 class="book-title">Cook Like an Italian</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Tobie Puttock</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover7.jpg" alt="book cover image">
+						<h3 class="book-title">Suneeta Vaswani</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Greeta</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover8.jpg" alt="book cover image">
+						<h3 class="book-title">Jamie Does</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover9.jpg" alt="book cover image">
+						<h3 class="book-title">Jamie's Italy</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+					<div class="preview">
+						<img class="book-cover" 
+							src="images/covers/book-cover10.jpg" alt="book cover image">
+						<h3 class="book-title">Vegetables Cookbook</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Matthew Biggs</a>
+						</p>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+		</div>
+
+
+
+		<footer class="app-footer">
+			<button class="button" type="button" name="settings">
+				<span class="button__wrapper">
+					<i class="fa fa-question-circle"></i>
+				</span>
+			</button>
+			<button class="button button--accent" type="button" name="settings">
+				<span class="button__wrapper">
+					<i class="fa fa-cog"></i>
+				</span>
+			</button>
+		</footer>
+
+	</body>
+</html>
