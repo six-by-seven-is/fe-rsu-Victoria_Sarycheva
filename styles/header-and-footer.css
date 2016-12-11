@@ -12,12 +12,12 @@
 }
 
 .app-header{
-	border-radius: 5px 5px 0 0;
+	/*border-radius: 5px 5px 0 0;*/
 	background-color: #2f364a;
 }
 
 .app-footer{
-	border-radius: 0 0 5px 5px;
+	/*border-radius: 0 0 5px 5px;*/
 	font-size: 16px;
 	color: #fff;
 	background-color: #181e2c;
@@ -25,7 +25,7 @@
 
 
 
-.navigation_top{
+.navigation--top{
 	padding: 0 5px;
 }
 

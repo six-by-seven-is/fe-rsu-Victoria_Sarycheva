@@ -14,11 +14,11 @@
 	<body>
 
 		<header class="app-header">
-			<nav class="navigation navigation_top">
-				<a class="navigation__item" href="#">Help Center</a>
-				<a class="navigation__item" href="#">Our Support</a>
+			<nav class="navigation navigation--top">
+				<a class="navigation__item reference" href="#">Help Center</a>
+				<a class="navigation__item reference" href="#">Our Support</a>
 			</nav>
-			<button class="button button_accent" type="button" name="authorization">
+			<button class="button button--accent" type="button" name="authorization">
 				<span class="button__wrapper">
 					<img class="button__image" src="images/avatar-01.jpg" alt="user photo">
 					<span class="button__text">John Doe</span>
@@ -32,85 +32,85 @@
 		<div class="app-content">
 
 			<aside class="sidebar">
-				<div class="navigation__section cta-section">
-					<button class="button button_cta" type="button" name="addabook">
+				<div class="panel cta-section">
+					<button class="button button--cta" type="button" name="addabook">
 						<span class="button__wrapper">
 							<i class="fa fa-plus"></i>
 							<span class="button__text">Add a book</span>
 						</span>
 					</button>
 				</div>
-				<div class="navigation__section">
-					<nav class="navigation_main">
-						<a class="navigation__item" href="#">
+				<div class="panel">
+					<nav class="navigation--main">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-book"></i>
 							<span>Now reading</span>
 						</a>
-						<a class="navigation__item" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-globe"></i>
 							<span>Browse</span>
 						</a>
-						<a class="navigation__item" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-shopping-cart"></i>
 							<span>Buy books</span>
 						</a>
-						<a class="navigation__item" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-star"></i>
 							<span>Favourite books</span>
 						</a>
-						<a class="navigation__item" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-th-list"></i>
 							<span>Wishlist</span>
 						</a>
-						<a class="navigation__item" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#">
 							<i class="fa fa-clock-o"></i>
 							<span>History</span>
 						</a>
 					</nav>
 				</div>
-				<div class="navigation__section">
+				<div class="panel">
 					<ul class="cathegories">
-						<li class="cathegory__item">
-							<a class="navigation__item" href="#">Must read titles</a>
+						<li class="cathegory cathegory--red-bullet">
+							<a class="navigation__item reference" href="#">Must read titles</a>
 						</li>
-						<li class="cathegory__item">
-							<a class="navigation__item" href="#">Best of list</a>
+						<li class="cathegory cathegory--yellow-bullet">
+							<a class="navigation__item reference" href="#">Best of list</a>
 						</li>
-						<li class="cathegory__item">
-							<a class="navigation__item" href="#">Classic novels</a>
+						<li class="cathegory cathegory--skyblue-bullet">
+							<a class="navigation__item reference" href="#">Classic novels</a>
 						</li>
-						<li class="cathegory__item">
-							<a class="navigation__item" href="#">Non fiction</a>
+						<li class="cathegory cathegory--violet-bullet">
+							<a class="navigation__item reference" href="#">Non fiction</a>
 						</li>
 					</ul>
 				</div>
-				<div class="navigation__section">
+				<div class="panel">
 					<div class="history__item">
-						<p class="_reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
+						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
 						<div>
-							<p class="_reduced-vertical-margin">
+							<p class="p--reduced-vertical-margin">
 								You added 
-									<a class="reference" href="#">Fight Club</a> 
+									<a class="reference reference--bright" href="#">Fight Club</a> 
 								by 
-									<a class="reference" href="#">Chuck Palahniuk</a> 
+									<a class="reference reference--bright" href="#">Chuck Palahniuk</a> 
 								to your 
-									<a class="reference" href="#">Must Read Titles</a>.
+									<a class="reference reference--bright" href="#">Must Read Titles</a>.
 							</p>
-							<p class="_reduced-vertical-margin">24 minutes ago</p>
+							<p class="p--reduced-vertical-margin">24 minutes ago</p>
 						</div>
 					</div>
 					<div class="history__item">
-						<p class="_reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
+						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
 						<div>
-							<p class="_reduced-vertical-margin">
+							<p class="p--reduced-vertical-margin">
 								You added 
-									<a class="reference" href="#">The Trial</a> 
+									<a class="reference reference--bright" href="#">The Trial</a> 
 								by 
-									<a class="reference" href="#">Franz Kafka</a> 
+									<a class="reference reference--bright" href="#">Franz Kafka</a> 
 								to your 
-									<a class="reference" href="#">Must Read Titles</a>.
+									<a class="reference reference--bright" href="#">Must Read Titles</a>.
 							</p>
-							<p class="_reduced-vertical-margin">48 minutes ago</p>
+							<p class="p--reduced-vertical-margin">48 minutes ago</p>
 						</div>
 					</div>
 				</div>
@@ -129,25 +129,25 @@
 								<input class="r-button" 
 									type="radio" name="bookfilter" 
 									value="all" id="allbooks" checked>
-								<label class="navigation__item" for="allbooks">
+								<label class="filter__item reference reference--non-underlined" for="allbooks">
 									All books
 								</label>
 								<input class="r-button" 
 									type="radio" name="bookfilter" 
 									value="recent" id="recentbooks">
-								<label class="navigation__item" for="recentbooks">
+								<label class="filter__item reference reference--non-underlined" for="recentbooks">
 									Most recent
 								</label>
 								<input class="r-button" 
 									type="radio" name="bookfilter" 
 									value="popular" id="popularbooks">
-								<label class="navigation__item" for="popularbooks">
+								<label class="filter__item reference reference--non-underlined" for="popularbooks">
 									Most popular
 								</label>
 								<input class="r-button" 
 									type="radio" name="bookfilter" 
 									value="free" id="freebooks">
-								<label class="navigation__item" for="freebooks">
+								<label class="filter__item reference reference--non-underlined" for="freebooks">
 									Free books
 								</label>
 							</div>
@@ -167,7 +167,9 @@
 						<img class="book-cover" 
 							src="images/covers/book-cover1.jpg" alt="book cover image">
 						<h3 class="book-title">Jewels of Nizam</h3>
-						<p class="book-author">by Greeta Devi</p>
+						<p class="book-author">by 
+							<a class="reference" href="#">Greeta Devi</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -180,7 +182,9 @@
 						<img class="book-cover" 
 							src="images/covers/book-cover2.jpg" alt="book cover image">
 						<h3 class="book-title">Cakes &amp; Bakes</h3>
-						<p class="book-author">by Sanjeev Kapoor</p>
+						<p class="book-author">by 
+							<a class="reference" href="#">Sanjeev Kapoor</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -193,7 +197,9 @@
 						<img class="book-cover" 
 							src="images/covers/book-cover3.jpg" alt="book cover image">
 						<h3 class="book-title">Jamie’s Kitchen</h3>
-						<p class="book-author">by Jamie Oliver</p>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -206,7 +212,9 @@
 						<img class="book-cover" 
 							src="images/covers/book-cover4.jpg" alt="book cover image">
 						<h3 class="book-title">Inexpensive Family Meals</h3>
-						<p class="book-author">by Simon Holst</p>
+						<p class="book-author">by 
+							<a class="reference" href="#">Simon Holst</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -219,7 +227,9 @@
 						<img class="book-cover" 
 							src="images/covers/book-cover5.jpg" alt="book cover image">
 						<h3 class="book-title">Paleo Slow Cooking</h3>
-						<p class="book-author">by Chrissy Gower</p>
+						<p class="book-author">by 
+							<a class="reference" href="#">Chrissy Gower</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -231,8 +241,10 @@
 					<div class="preview">
 						<img class="book-cover" 
 							src="images/covers/book-cover6.jpg" alt="book cover image">
-						<h3 class="book-title">Details</h3>
-						<p class="book-author">by Greeta</p>
+						<h3 class="book-title">Cook Like an Italian</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Tobie Puttock</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -244,8 +256,10 @@
 					<div class="preview">
 						<img class="book-cover" 
 							src="images/covers/book-cover7.jpg" alt="book cover image">
-						<h3 class="book-title">Details</h3>
-						<p class="book-author">by Greeta</p>
+						<h3 class="book-title">Suneeta Vaswani</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Greeta</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -257,8 +271,10 @@
 					<div class="preview">
 						<img class="book-cover" 
 							src="images/covers/book-cover8.jpg" alt="book cover image">
-						<h3 class="book-title">Details</h3>
-						<p class="book-author">by Greeta</p>
+						<h3 class="book-title">Jamie Does</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -270,8 +286,10 @@
 					<div class="preview">
 						<img class="book-cover" 
 							src="images/covers/book-cover9.jpg" alt="book cover image">
-						<h3 class="book-title">Details</h3>
-						<p class="book-author">by Greeta</p>
+						<h3 class="book-title">Jamie's Italy</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Jamie Oliver</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -283,8 +301,10 @@
 					<div class="preview">
 						<img class="book-cover" 
 							src="images/covers/book-cover10.jpg" alt="book cover image">
-						<h3 class="book-title">Details</h3>
-						<p class="book-author">by Greeta</p>
+						<h3 class="book-title">Vegetables Cookbook</h3>
+						<p class="book-author">by 
+							<a class="reference" href="#">Matthew Biggs</a>
+						</p>
 						<div class="rating">
 							<i class="fa fa-star"></i>
 							<i class="fa fa-star"></i>
@@ -307,7 +327,7 @@
 					<i class="fa fa-question-circle"></i>
 				</span>
 			</button>
-			<button class="button button_accent" type="button" name="settings">
+			<button class="button button--accent" type="button" name="settings">
 				<span class="button__wrapper">
 					<i class="fa fa-cog"></i>
 				</span>

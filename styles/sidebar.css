@@ -14,27 +14,32 @@
 	overflow-y: auto;
 }
 
-.navigation__section{
+.panel{
 	background-color: #1f2637;
 }
 
-.navigation__section:not(:first-child){
+.panel:not(:first-child){
 	border-top: 1px solid #282f41;
 	margin-top: 4px;
 	padding-bottom: 10px;
 }
 
-.navigation__section:not(:last-child){
+.panel:not(:last-child){
 	border-bottom: 1px solid #141824;
 	/*margin-bottom: 4px;*/
+}
+
+.panel:last-of-type{
+	flex-grow: 1;
 }
 
 .cta-section{
 	padding: 35px 20px;
 }
 
-.button_cta{
-	width: 160px;
+.button--cta{
+		width: 100%;
+	min-width: 160px;
 	height: 44px;
 	background-color: #f2795a;
 	color: #fff;
@@ -45,13 +50,13 @@
 	border-radius: 5px;
 }
 
-.button_cta .fa{
+.button--cta .fa{
 	font-size: 16px;
 	line-height: 16px;
 	padding-right: 15px;
 }
 
-.navigation_main .navigation__item{
+.navigation--main .navigation__item{
 	display: block;
 	padding: 0 20px;
 
@@ -60,12 +65,12 @@
 	transition: .2s;
 }
 
-.navigation_main .navigation__item .fa{
+.navigation--main .navigation__item .fa{
 	font-size: 14px;
 	width: 26px;
 }
 
-.navigation_main .navigation__item:hover{
+.navigation--main .navigation__item:hover{
 	color: #fff;
 	background-color: #15a4fa;
 }
@@ -74,15 +79,15 @@
 	padding-left: 45px;
 }
 
-.cathegories .cathegory__item{
+.cathegory{
 	font-size: 20px;
 	line-height: 35px;
 }
 
-.cathegories .cathegory__item:nth-of-type(1) { color: #e64c66; }
-.cathegories .cathegory__item:nth-of-type(2) { color: #ffab00; }
-.cathegories .cathegory__item:nth-of-type(3) { color: #00bfdd; }
-.cathegories .cathegory__item:nth-of-type(4) { color: #7874cf; }
+.cathegory--red-bullet { color: #e64c66; }
+.cathegory--yellow-bullet { color: #ffab00; }
+.cathegory--skyblue-bullet { color: #00bfdd; }
+.cathegory--violet-bullet { color: #7874cf; }
 
 .history__item{
 	font-size: 12px;
@@ -93,7 +98,11 @@
 	flex-flow: row nowrap; /*short form*/
 }
 
-.history__item ._reduced-vertical-margin{
+.history__item:last-of-type{
+	padding-bottom: 20px;
+}
+
+.p--reduced-vertical-margin{
 	margin: 6px 0;
 }
 
@@ -103,22 +112,6 @@
 	width: 26px;
 }
 
-.history__item .reference{
+.reference--bright{
 	color: #97b3ce;
-}
-
-.navigation_top .navigation__item:hover, 
-.cathegories .navigation__item:hover, 
-.history__item .reference:hover{
-	text-decoration: underline;
-}
-
-.navigation__section:last-of-type:after{
-	content:"";
-	height: 900px;
-	display: block;
-}
-
-.navigation__section:last-of-type{
-	overflow-y: hidden;
 }

@@ -21,33 +21,33 @@
 
 @font-face {
 	font-family: "Proxima Nova";
-	src: 	url('fonts/Proxima_Nova/regular-webfont.woff2') format('woff2'),
-			url('fonts/Proxima_Nova/regular-webfont.woff') format('woff'),
-			url('fonts/Proxima_Nova/regular-webfont.ttf') format('truetype');
+	src: 	url('../fonts/Proxima_Nova/regular-webfont.woff2') format('woff2'),
+			url('../fonts/Proxima_Nova/regular-webfont.woff') format('woff'),
+			url('../fonts/Proxima_Nova/regular-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
      font-family: "Proxima Nova";
-     src: 	url('fonts/Proxima_Nova/regular_italic-webfont.woff2') format('woff2'),
-			url('fonts/Proxima_Nova/regular_italic-webfont.woff') format('woff'),
-     		url('fonts/Proxima_Nova/regular_italic-webfont.ttf') format('truetype');
+     src: 	url('../fonts/Proxima_Nova/regular_italic-webfont.woff2') format('woff2'),
+			url('../fonts/Proxima_Nova/regular_italic-webfont.woff') format('woff'),
+     		url('../fonts/Proxima_Nova/regular_italic-webfont.ttf') format('truetype');
      font-weight: normal;
      font-style: italic;
 }
 @font-face {
      font-family: "Proxima Nova";
-     src: 	url('fonts/Proxima_Nova/bold-webfont.woff2') format('woff2'),
-			url('fonts/Proxima_Nova/bold-webfont.woff') format('woff'),
-     		url('fonts/Proxima_Nova/bold-webfont.ttf') format('truetype');
+     src: 	url('../fonts/Proxima_Nova/bold-webfont.woff2') format('woff2'),
+			url('../fonts/Proxima_Nova/bold-webfont.woff') format('woff'),
+     		url('../fonts/Proxima_Nova/bold-webfont.ttf') format('truetype');
      font-weight: bold;
      font-style: normal;
 }
 @font-face {
      font-family: "Proxima Nova";
-     src: 	url('fonts/Proxima_Nova/bold_italic-webfont.woff2') format('woff2'),
-			url('fonts/Proxima_Nova/bold_italic-webfont.woff') format('woff'),
-     		url('fonts/Proxima_Nova/bold_italic-webfont.ttf') format('truetype');
+     src: 	url('../fonts/Proxima_Nova/bold_italic-webfont.woff2') format('woff2'),
+			url('../fonts/Proxima_Nova/bold_italic-webfont.woff') format('woff'),
+     		url('../fonts/Proxima_Nova/bold_italic-webfont.ttf') format('truetype');
      font-weight: bold;
      font-style: italic;
 }
@@ -81,6 +81,15 @@ h1, h2, h3, h4, h5, h6,
 	color: #78829d;
 }
 
+.reference:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.reference--non-underlined:hover{
+	text-decoration: none;
+}
+
 .button{
 	border: none;
 	height: 100%;
@@ -91,26 +100,18 @@ h1, h2, h3, h4, h5, h6,
 	background-color: #1f2637;
 }
 
+.button--accent{
+	background-color: #15a4fa;
+}
+
 .button__wrapper{
 	display: flex;
 	align-items: center;
 	flex-flow: row nowrap; /*short form*/
+	/*justify-content: center;*/
 }
 
-.button:hover{
-	box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .75);
-}
-
-.button .fa{
-	padding: 0 5px;
-	flex-grow: 0;
-}
-
-.button_accent{
-	background-color: #15a4fa;
-}
-
-.button_accent .button__image{
+.button__image{
 	border: 1px solid #eaeff7;
 	border-radius: 50%;
 	height: 30px;
@@ -118,6 +119,20 @@ h1, h2, h3, h4, h5, h6,
 	margin-left: -5px;
 }
 
-.button_accent .button__text{
+.button__text{
+	flex-grow: 1;
+}
+
+.button--accent .button__text{
 	padding: 0 10px;
+}
+
+.button .fa{
+	padding: 0 5px;
+	flex-grow: 0;
+}
+
+.button:hover{
+	box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .75);
+	cursor: pointer;
 }

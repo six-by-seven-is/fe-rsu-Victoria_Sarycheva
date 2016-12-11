@@ -42,3 +42,13 @@
 	width: 7px;
 	height: 0px;
 }
+
+@-moz-document url-prefix() { 
+	.sidebar .cta-section {
+		padding-right: 40px;
+	}
+
+	.sidebar .panel:last-of-type {
+		padding-right: 30px;
+	}
+}
