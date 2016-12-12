@@ -13,6 +13,10 @@
 	</head>
 	<body>
 
+
+		<div class="modal non-visual" id="modal-w">
+		</div>
+
 		<header class="app-header">
 			<nav class="navigation navigation--top">
 				<a class="navigation__item reference" href="#">Help Center</a>
@@ -33,7 +37,7 @@
 
 			<aside class="sidebar">
 				<div class="panel cta-section">
-					<button class="button button--cta" type="button" name="addabook">
+					<button class="button button--cta" type="button" name="addabook" id="addabook-button">
 						<span class="button__wrapper">
 							<i class="fa fa-plus"></i>
 							<span class="button__text">Add a book</span>
@@ -46,7 +50,7 @@
 							<i class="fa fa-book"></i>
 							<span>Now reading</span>
 						</a>
-						<a class="navigation__item reference reference--non-underlined" href="#">
+						<a class="navigation__item reference reference--non-underlined current" href="#" id="browse-page-link">
 							<i class="fa fa-globe"></i>
 							<span>Browse</span>
 						</a>
@@ -62,7 +66,7 @@
 							<i class="fa fa-th-list"></i>
 							<span>Wishlist</span>
 						</a>
-						<a class="navigation__item reference reference--non-underlined" href="#">
+						<a class="navigation__item reference reference--non-underlined" href="#" id="history-page-link">
 							<i class="fa fa-clock-o"></i>
 							<span>History</span>
 						</a>
@@ -87,7 +91,7 @@
 				<div class="panel">
 					<div class="history__item">
 						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
-						<div>
+						<div class="history__item-description">
 							<p class="p--reduced-vertical-margin">
 								You added 
 									<a class="reference reference--bright" href="#">Fight Club</a> 
@@ -101,7 +105,7 @@
 					</div>
 					<div class="history__item">
 						<p class="p--reduced-vertical-margin"><i class="fa fa-clock-o"></i></p>
-						<div>
+						<div class="history__item-description">
 							<p class="p--reduced-vertical-margin">
 								You added 
 									<a class="reference reference--bright" href="#">The Trial</a> 
@@ -117,7 +121,7 @@
 			</aside>
 
 
-			<section class="content">
+			<section class="content" id="page-content">
 
 				<header class="content__header">
 					<div class="content__header__line">
@@ -125,7 +129,7 @@
 					</div>
 					<div class="content__header__line">
 						<form class="filter">
-							<div class="filter__group">
+							<div class="filter__group filters">
 								<input class="r-button" 
 									type="radio" name="bookfilter" 
 									value="all" id="allbooks" checked>
@@ -152,7 +156,7 @@
 								</label>
 							</div>
 							<div class="filter__group searchform">
-								<input class="searchform__field" type="search" 
+								<input class="inputfield searchform__field" id="book-search" type="search" 
 									placeholder="Enter Keywords">
 								<button class="searchform__button" type="submit">
 									<i class="fa fa-search"></i>
@@ -163,154 +167,154 @@
 				</header>
 
 				<div class="tiles-container">
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover1.jpg" alt="book cover image">
 						<h3 class="book-title">Jewels of Nizam</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Greeta Devi</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+						<div class="rating" data-rating="5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover2.jpg" alt="book cover image">
 						<h3 class="book-title">Cakes &amp; Bakes</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Sanjeev Kapoor</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+						<div class="rating" data-rating="5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover3.jpg" alt="book cover image">
 						<h3 class="book-title">Jamie’s Kitchen</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Jamie Oliver</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
+						<div class="rating" data-rating="4.5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star-half-o"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover4.jpg" alt="book cover image">
 						<h3 class="book-title">Inexpensive Family Meals</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Simon Holst</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-o"></i>
+						<div class="rating" data-rating="4">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star-o"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover5.jpg" alt="book cover image">
 						<h3 class="book-title">Paleo Slow Cooking</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Chrissy Gower</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
+						<div class="rating" data-rating="4.5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star-half-o"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover6.jpg" alt="book cover image">
 						<h3 class="book-title">Cook Like an Italian</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Tobie Puttock</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-o"></i>
+						<div class="rating" data-rating="4">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star-o"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover7.jpg" alt="book cover image">
 						<h3 class="book-title">Suneeta Vaswani</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Greeta</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+						<div class="rating" data-rating="5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover8.jpg" alt="book cover image">
 						<h3 class="book-title">Jamie Does</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Jamie Oliver</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-o"></i>
+						<div class="rating" data-rating="4">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star-o"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover9.jpg" alt="book cover image">
 						<h3 class="book-title">Jamie's Italy</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Jamie Oliver</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+						<div class="rating" data-rating="5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star"></i>
+							<i data-order="5" class="fa fa-star"></i>
 						</div>
 					</div>
-					<div class="preview">
+					<div class="preview" data-tags>
 						<img class="book-cover" 
 							src="images/covers/book-cover10.jpg" alt="book cover image">
 						<h3 class="book-title">Vegetables Cookbook</h3>
 						<p class="book-author">by 
 							<a class="reference" href="#">Matthew Biggs</a>
 						</p>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-							<i class="fa fa-star-o"></i>
+						<div class="rating" data-rating="3.5">
+							<i data-order="1" class="fa fa-star"></i>
+							<i data-order="2" class="fa fa-star"></i>
+							<i data-order="3" class="fa fa-star"></i>
+							<i data-order="4" class="fa fa-star-half-o"></i>
+							<i data-order="5" class="fa fa-star-o"></i>
 						</div>
 					</div>
 				</div>
@@ -334,5 +338,8 @@
 			</button>
 		</footer>
 
+
+		<script language="javascript" type="text/javascript" src="script.js">
+		</script>
 	</body>
 </html>
