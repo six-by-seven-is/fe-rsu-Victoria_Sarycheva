@@ -6,9 +6,11 @@
 	display: flex;
 	flex-flow: column nowrap; /*short form*/
 	justify-content: flex-start/* space-between */;
+	flex-shrink: 0;
 
 	width: 15vw;
 	min-width: 200px;
+	max-width: 220px;
 	background-color: #19202e;
 
 	overflow-y: auto;
@@ -40,6 +42,7 @@
 .button--cta{
 		width: 100%;
 	min-width: 160px;
+	max-width: 200px;
 	height: 44px;
 	background-color: #f2795a;
 	color: #fff;
@@ -70,7 +73,7 @@
 	width: 26px;
 }
 
-.navigation--main .navigation__item:hover{
+.navigation--main .navigation__item:hover, .current{
 	color: #fff;
 	background-color: #15a4fa;
 }
