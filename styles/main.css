@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6,
 	cursor: pointer;
 }
 
-.new-book{
+.book-parameters{
 	box-sizing: border-box;
 		width: 440px;
 		height: 330px;
@@ -202,13 +202,13 @@ h1, h2, h3, h4, h5, h6,
 	overflow-y: scroll;
 }
 
-.new-book table{
+.book-parameters table{
 	margin: 0 auto;
 	width: 330px;
 	/*border: solid 1px red;*/
 }
 
-.new-book td{
+.book-parameters td{
 	padding: 7px;
 	vertical-align: top;
 }
