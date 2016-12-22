@@ -1,3 +1,3 @@
 # fe-rsu-Victoria_Sarycheva
 epam front-end courses sandbox
-JS DOM, BOM, Events task
+JS OOP & MVC task
